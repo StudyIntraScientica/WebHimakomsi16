@@ -18,7 +18,8 @@ class CreateTableBlog extends Migration
             $table->text('content');
             $table->integer('tag');
             $table->string('image');
-            $table->author('author');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

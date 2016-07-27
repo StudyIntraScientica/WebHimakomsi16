@@ -1,82 +1,128 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <title>@yield('title')</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
 
-    <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+		<div class="nav-container">
+		    <nav>
+		        <div class="nav-bar" data-fixed-at="700">
+		            <div class="nav-module logo-module left">
+		                <a class="inner-link" href="#top"><img alt="logo" class="logo logo-dark" src="img/logo-himakomsi.png"></a>
+		            </div>
+		            <div class="nav-module menu-module left">
+		                <ul class="menu">
+		                    <li class="vpe">
+		                        <a class="inner-link" href="#about">About</a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a class="inner-link" href="#divisi">Divisi</a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a class="inner-link" href="#news">News &amp; Events</a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a class="inner-link" href="#contact">Contact</a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="#">Gallery</a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="#">Downloads</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		        <div class="nav-mobile-toggle visible-sm visible-xs">
+		            <i class="icon-Align-JustifyAll icon icon--sm"></i>
+		        </div>
+		    </nav>
+		</div>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+		<div class="main-container">
 
-    <style>
-        body {
-            font-family: 'Lato';
-        }
+      @yield('content')
 
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
-</head>
-<body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+			<footer class="bg--dark footer-4" id="contact">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-3 col-sm-4">
+		                <h6>Links</h6>
+		                <ul class="footer__navigation">
+		                    <li class="vpe">
+		                        <a href="http://sv.ugm.ac.id/"><span>SV UGM</span></a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="https://www.facebook.com/groups/1492834030930705/?fref=ts"><span>FB Keluarga Komsi</span></a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="http://www.elisa.ugm.ac.id/"><span>Elisa UGM</span></a>
+		                    </li>
+		                </ul>
+		            </div>
+		            <div class="col-md-4 col-sm-8">
+		                <h6>Recent Tweets</h6>
+		                <div class="twitter-feed">
+		                    <div class="tweets-feed" data-amount="2" data-widget-id="492085717044981760"></div>
+		                </div>
+		            </div>
+		            <div class="col-md-4 col-md-offset-1 col-sm-12">
+		                <h6>Contact Us</h6>
+                    <p>himakomsi.ugm@gmail.com <br>
+                    Jl. Kaliurang No 65, Gedung Sekolah Vokasi</p>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
-                </a>
-            </div>
+		                <h6>Connect with Us</h6>
+		                <ul class="social-list">
+		                    <li class="vpe">
+		                        <a href="https://twitter.com/HimakomsiUGM"><i class="socicon-twitter"></i></a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="https://www.facebook.com/HimakomsiUgm/"><i class="socicon-facebook"></i></a>
+		                    </li>
+		                    <li class="vpe">
+		                        <a href="https://www.youtube.com/channel/UCb7Uv2m5MSfuTL8UhaWC-jA"><i class="socicon-youtube"></i></a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="footer__lower">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-6 text-center-xs">
+		                    <span class="type--fine-print">© Copyright
+		                    <span class="update-year">2016</span> Keluarga Himpunan Mahasiswa Komputer &amp; Sistem Informasi</span>
+		                </div>
+		                <div class="col-sm-6 text-right text-center-xs">
+		                    <a class="inner-link top-link" href="#top"><i class="interface-up-open-big"></i></a>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+		</div>
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    @yield('content')
-
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-</body>
+		<script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/isotope.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scrollreveal.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

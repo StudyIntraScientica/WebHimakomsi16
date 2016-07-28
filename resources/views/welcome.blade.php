@@ -8,66 +8,30 @@
     <ul class="slides">
       <li class="imagebg" data-overlay="5">
         <div class="background-image-holder">
-          <img alt="image" src="img/case-study-large-2.jpg">
+          <img alt="image" src="img/1.jpg">
         </div>
         <div class="container pos-absolute pos-bottom text-center-xs">
           <div class="row">
             <div class="col-sm-6">
-              <h3>Ergo Coding</h3>
+              <h3>Himakomsi</h3>
               <p class="lead">
-                Complete branding, digital<br>
-                and e-commerce storefront design
+                Himpunan Mahasiswa Komputer dan Sistem Informasi
               </p>
 
             </div>
           </div>
         </div>
       </li>
-      <li class="imagebg" data-overlay="1">
+      <li class="imagebg" data-overlay="5">
         <div class="background-image-holder">
-          <img alt="image" src="img/hero20.jpg">
+          <img alt="image" src="img/2.jpg">
         </div>
         <div class="container pos-absolute pos-bottom text-center-xs">
           <div class="row">
             <div class="col-sm-6">
-              <h3>Yield Clothing</h3>
+              <h3>Himakomsi</h3>
               <p class="lead">
-                Complete e-commerce offering<br>
-                including mobile app development
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="imagebg" data-overlay="2">
-        <div class="background-image-holder">
-          <img alt="image" src="img/case-study-large-3.jpg">
-        </div>
-        <div class="container pos-absolute pos-bottom text-center-xs">
-          <div class="row">
-            <div class="col-sm-6">
-              <h3>Tindergram</h3>
-              <p class="lead">
-                User Interaction concepts,<br>
-                prototype and full-stack development
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="imagebg" data-overlay="3">
-        <div class="background-image-holder">
-          <img alt="image" src="img/case-study-large-1.jpg">
-        </div>
-        <div class="container pos-absolute pos-bottom text-center-xs">
-          <div class="row">
-            <div class="col-sm-6">
-              <h3>Union Weddings</h3>
-              <p class="lead">
-                Personal branding, stationery<br>
-                and digital presence
+                Pengurus harian himakomsi
               </p>
 
             </div>
@@ -133,34 +97,34 @@
             <div class="feature feature-1">
               <i class="icon icon-Music-Note"></i>
               <h5>TEA</h5>
-              <p>Pillar includes the Icons Mind kit with each purchase.</p>
+              <p>Divisi yang berhubungan dengan kegiatan-kegiatan untuk menyalurkan minat dan bakat para anggota Himakomsi.</p>
             </div>
           </div>
           <div class="col-xs-6">
             <div class="feature feature-1">
               <i class="icon icon-Coding"></i>
               <h5>SIS</h5>
-              <p>Each Pillar purchase comes with 6 months support included.</p>
+              <p>Divisi yang mengurusi kegiatan-kegiatan di Himakomsi yang bertujuan sebagai sarana memperdalam bidang akademik para anggota Himakomsi.</p>
             </div>
           </div>
           <div class="col-xs-6">
             <div class="feature feature-1">
               <i class="icon icon-Sand-watch"></i>
               <h5>EON</h5>
-              <p>Including tons of vibrant, carefully styled componenents.</p>
+              <p>Divisi yang menjalankan dan mengurusi kegiatan internal maupun eksternal di Himakomsi.</p>
             </div>
           </div>
           <div class="col-xs-6">
             <div class="feature feature-1">
               <i class="icon icon-Bag-Coins"></i>
               <h5>EPS</h5>
-              <p>Beautiful product pages and unique sidebar cart included.</p>
+              <p>Divisi yang menjalankan dan mengurusi kegiatan-kegiatan Himakomsi khususnya di bidang Kewirausahaan.</p>
             </div>
           </div><div class="col-xs-6">
             <div class="feature feature-1">
               <i class="icon icon-Conference"></i>
               <h5>ADPA</h5>
-              <p>Beautiful product pages and unique sidebar cart included.</p>
+              <p>Divisi yang bertanggung jawab atas ruang kesekretariatan Himakomsi serta yang menjalankan program kegiatan kegiatan sosial.</p>
             </div>
           </div>
         </div>
@@ -172,71 +136,39 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <h3>News &amp; Events</h3>
+          <h3>Latest News &amp; Events</h3>
           <br>
         </div>
       </div>
       <div class="row">
         <div class="masonry masonry-blog">
           <div class="masonry__container masonry--animate masonry--active">
-            </div><div class="col-md-4 col-sm-6 masonry__item">
-              <a href="#">
+            @foreach($blog as $key)
+            <div class="col-md-4 col-sm-6 masonry__item">
+              <a href="{{ url('blog') }}/{{ $key->id }}">
                 <div class="card card-4">
                   <div class="card__image">
-                    <img alt="Pic" src="img/small5.jpg">
+                    <img alt="Pic" src="{{ url('uploads/blog') }}/{{ $key->image }}">
                   </div>
                   <div class="card__body boxed boxed--sm bg--white">
-                    <h6>Travel</h6>
+                    @if($key->tag == 1)
+                      <h6>Event</h6>
+                    @else
+                      <h6>News</h6>
+                    @endif
                     <div class="card__title">
-                      <h5>Western Australia's top undiscovered hot spots</h5>
+                      <h5>{{ $key->title }}</h5>
                     </div>
                     <hr>
                     <div class="card__lower">
                       <span>by</span>
-                      <span class="h6">Luke Gibson</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div><div class="col-md-4 col-sm-6 masonry__item">
-              <a href="#">
-                <div class="card card-4">
-                  <div class="card__image">
-                    <img alt="Pic" src="img/small5.jpg">
-                  </div>
-                  <div class="card__body boxed boxed--sm bg--white">
-                    <h6>Travel</h6>
-                    <div class="card__title">
-                      <h5>Western Australia's top undiscovered hot spots</h5>
-                    </div>
-                    <hr>
-                    <div class="card__lower">
-                      <span>by</span>
-                      <span class="h6">Luke Gibson</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div><div class="col-md-4 col-sm-6 masonry__item">
-              <a href="#">
-                <div class="card card-4">
-                  <div class="card__image">
-                    <img alt="Pic" src="img/small5.jpg">
-                  </div>
-                  <div class="card__body boxed boxed--sm bg--white">
-                    <h6>Travel</h6>
-                    <div class="card__title">
-                      <h5>Western Australia's top undiscovered hot spots</h5>
-                    </div>
-                    <hr>
-                    <div class="card__lower">
-                      <span>by</span>
-                      <span class="h6">Luke Gibson</span>
+                      <span class="h6">{{ DB::table('users')->where('id', $key->user_id)->value('name') }}</span>
                     </div>
                   </div>
                 </div>
               </a>
             </div>
+            @endforeach
           </div>
         </div>
         <div class="row text-center">

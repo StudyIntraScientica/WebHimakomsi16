@@ -23,7 +23,7 @@
   										<div class="card card--horizontal card-6">
   											<div class="card__image col-sm-7 col-md-8">
   												<div class="background-image-holder">
-  													<img alt="Pic" src="uploads/blog/{{ $key->image }}">
+  													<img alt="Pic" src="{{ url('uploads/blog') }}/{{ $key->image }}">
   												</div>
   											</div>
   											<div class="card__body col-sm-5 col-md-4 boxed boxed--lg bg--white">

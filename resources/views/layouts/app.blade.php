@@ -67,6 +67,9 @@
 		                    <li class="vpe">
 		                        <a href="http://www.elisa.ugm.ac.id/"><span>Elisa UGM</span></a>
 		                    </li>
+                        <li class="vpe">
+                          <a href="https://drive.google.com/open?id=0B606J5vy9bfLfmxEYVZGTy10THhTSHdzNnF1UlpSWHpZOEJGZ0R2ZnNNTHRkM0Zzcmx2OFk">Downloads</a>
+                        </li>
 		                </ul>
 		            </div>
 		            <div class="col-md-4 col-sm-8">
@@ -78,7 +81,7 @@
 		            <div class="col-md-4 col-md-offset-1 col-sm-12">
 		                <h6>Contact Us</h6>
                     <p>himakomsi.ugm@gmail.com <br>
-                    Jl. Kaliurang No 65, Gedung Sekolah Vokasi</p>
+                    Sekolah Vokasi Gedung SV UGM, Sekip Unit 1 Catur Tunggal Depok Sleman Yogyakarta</p>
 
 		                <h6>Connect with Us</h6>
 		                <ul class="social-list">

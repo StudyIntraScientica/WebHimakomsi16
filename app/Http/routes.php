@@ -12,9 +12,7 @@
 */
 
 // Rute khusus untuk user
-Route::get('/', function () {
-    return view("welcome");
-});
+Route::get('/', 'HomeController@showWelcome');
 Route::resource('blog', 'BlogController', ['only' =>[
   'index', 'show'
 ]]);

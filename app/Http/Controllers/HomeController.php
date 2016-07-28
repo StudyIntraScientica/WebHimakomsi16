@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Blog;
+
 class HomeController extends Controller
 {
     /**
@@ -25,5 +27,11 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function showWelcome()
+    {
+        $blog = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        return View('welcome')->with('blog', $blog);
     }
 }

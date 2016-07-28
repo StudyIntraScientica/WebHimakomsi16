@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <title>@yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{{ url('css/socicon.css') }}" rel="stylesheet" type="text/css" media="all">
+        <link href="{{ url('css/iconsmind.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ url('css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{{ url('css/interface-icons.css') }}" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{{ url('css/owl.carousel.css') }}" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{{ url('css/theme.css') }}" rel="stylesheet" type="text/css" media="all"/>
         <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
@@ -20,27 +20,24 @@
 		    <nav>
 		        <div class="nav-bar" data-fixed-at="700">
 		            <div class="nav-module logo-module left">
-		                <a class="inner-link" href="#top"><img alt="logo" class="logo logo-dark" src="img/logo-himakomsi.png"></a>
+		                <a class="inner-link" href="{{ url('/') }}#top"><img alt="logo" class="logo logo-dark" src="{{ url('img/logo-himakomsi.png') }}"></a>
 		            </div>
 		            <div class="nav-module menu-module left">
 		                <ul class="menu">
 		                    <li class="vpe">
-		                        <a class="inner-link" href="#about">About</a>
+		                        <a class="inner-link" href="{{ url('/') }}#about">About</a>
 		                    </li>
 		                    <li class="vpe">
-		                        <a class="inner-link" href="#divisi">Divisi</a>
+		                        <a class="inner-link" href="{{ url('/') }}#divisi">Divisi</a>
 		                    </li>
 		                    <li class="vpe">
-		                        <a class="inner-link" href="#news">News &amp; Events</a>
+		                        <a class="inner-link" href="{{ url('/') }}#news">News &amp; Events</a>
 		                    </li>
 		                    <li class="vpe">
-		                        <a class="inner-link" href="#contact">Contact</a>
+		                        <a class="inner-link" href="{{ url('/') }}#contact">Contact</a>
 		                    </li>
 		                    <li class="vpe">
 		                        <a href="#">Gallery</a>
-		                    </li>
-		                    <li class="vpe">
-		                        <a href="#">Downloads</a>
 		                    </li>
 		                </ul>
 		            </div>
@@ -54,7 +51,6 @@
 		<div class="main-container">
 
       @yield('content')
-
 
 			<footer class="bg--dark footer-4" id="contact">
 		    <div class="container">
@@ -76,7 +72,7 @@
 		            <div class="col-md-4 col-sm-8">
 		                <h6>Recent Tweets</h6>
 		                <div class="twitter-feed">
-		                    <div class="tweets-feed" data-amount="2" data-widget-id="492085717044981760"></div>
+		                    <div class="tweets-feed" data-amount="2" data-widget-id="323381968450490369"></div>
 		                </div>
 		            </div>
 		            <div class="col-md-4 col-md-offset-1 col-sm-12">
@@ -116,13 +112,13 @@
 		</div>
 
 
-		<script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/isotope.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/twitterfetcher.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/scrollreveal.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
+		<script src="{{ url('js/jquery-2.1.4.min.js') }}"></script>
+        <script src="{{ url('js/isotope.min.js') }}"></script>
+        <script src="{{ url('js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url('js/twitterfetcher.min.js') }}"></script>
+        <script src="{{ url('js/smooth-scroll.min.js') }}"></script>
+        <script src="{{ url('js/scrollreveal.min.js') }}"></script>
+        <script src="{{ url('js/parallax.js') }}"></script>
+        <script src="{{ url('js/scripts.js') }}"></script>
     </body>
 </html>

@@ -11,12 +11,26 @@
 |
 */
 
+// Rute khusus untuk user
 Route::get('/', function () {
     return view("welcome");
 });
+Route::resource('blog', 'BlogController', ['only' =>[
+  'index', 'show'
+]]);
+Route::resource('gallery', 'GalleryController', ['only' =>[
+  'index', 'show'
+]]);
 
-Route::auth();
+// Rute khusus panel admin
+Route::group(['prefix' => 'admin'], function () {
+  Route::auth();
+  Route::get('/home', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index');
-Route::resource('blog', 'BlogController');
-Route::resource('gallery', 'GalleryController');
+  Route::resource('blog', 'BlogController', ['except' =>[
+    'index', 'show'
+  ]]);
+  Route::resource('gallery', 'GalleryController', ['except' =>[
+    'index', 'show'
+  ]]);
+});
